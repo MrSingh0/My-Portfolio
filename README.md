@@ -9,7 +9,6 @@ Welcome to my portfolio website repository! This project showcases my skills in 
 [Live Demo](https://priyamkumar.netlify.app) 
 
 
-![Portfolio Preview](screenshot.png) <!-- Add a screenshot of your portfolio website -->
 ![image](https://github.com/MrSingh0/My-Portfolio/assets/136845755/af5266fb-03e7-4739-9008-b82e50925b4e)
 
 ![image](https://github.com/MrSingh0/My-Portfolio/assets/136845755/237913b5-fba8-48f5-b768-f9f8c5c756c2)
