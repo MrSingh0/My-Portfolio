@@ -1,0 +1,370 @@
+* {
+    color: black;
+}
+
+
+body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    background-color: whitesmoke;
+    /* background-color: rgb(27,27,27); */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body::-webkit-scrollbar {
+    width: 5px;
+}
+
+body::-webkit-scrollbar-thumb {
+    background-color: tomato;
+}
+
+body::-webkit-scrollbar-track {
+    background-color: black;
+}
+
+.nav {
+    z-index: 1200;
+    width: 94%;
+    height: 8vh;
+    position: fixed;
+    margin-top: 1rem;
+    margin-left: 1rem;
+    margin-right: 1rem;
+    border: 2px solid #161616;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    background-color: rgb(47, 47, 47);
+    border-radius: 1rem;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.nav h3 a {
+    font-size: 2vw;
+    color: #FF9F1C !important;
+    text-decoration: none;
+}
+
+.nav ul {
+    list-style: none;
+    display: flex;
+    font-size: 1.2vw;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.nav ul a {
+    text-decoration: none;
+    color: white !important;
+}
+
+.nav li{
+    margin-right: 1rem;
+}
+
+.nav ul a:hover {
+    color: #FF9F1C !important;
+    text-decoration: underline;
+}
+
+.second {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.second h1 {
+    font-size: 4rem;
+}
+
+.second p {
+    color: gray;
+    font-size: 1.5rem;
+}
+
+.second .intro{
+    font-size: 1.3rem;
+}
+
+.second .pic1 {
+    width: 25vw;
+    height: 65vh;
+    overflow: hidden;
+    margin-top: 8vh;
+    border-radius: 2rem;
+}
+
+.second .pic1 img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.second .info {
+    width: 60vw;
+}
+
+.third {
+    height: 98vh;
+    width: 99vw;
+    margin: 0px 1vh;
+}
+
+.fourth {
+    height: 98vh;
+    width: 99vw;
+    margin: 0px 1vh;
+    margin-bottom: 0.5vh;
+    border-bottom-right-radius: 1rem;
+    border-bottom-left-radius: 1rem;
+}
+
+button {
+    border: 5px solid #FF9F1C;
+    color: #FF9F1C;
+    background: transparent;
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    border-radius: 0.4rem;
+}
+
+.skill {
+    padding-right: 2rem;
+    padding-left: 2rem;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 2rem;
+}
+
+.sk1 {
+    margin-top: 2rem;
+    width: 12vw;
+    height: 22vh;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    overflow: hidden;
+}
+
+.sk1 img {
+    width: 100%;
+    height: 85%;
+    border-bottom-left-radius: 10%;
+    border-bottom-right-radius: 10%;
+    border: 2px solid black;
+}
+
+.sk1:hover {
+    background: linear-gradient(#FF9F1C, rgb(55, 54, 54));
+    border: 2px solid white;
+}
+
+.fourth h1,
+.third h1 {
+    font-weight: 600;
+    font-size: 3rem;
+    padding-left: 1rem;
+}
+
+.proj {
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.fourth button {
+    border-radius: 2rem;
+    border-width: 2px;
+    margin-left: 48vw;
+    margin-top: 2rem;
+}
+
+footer {
+    color: rgb(138, 137, 137);
+    width: 90vw;
+    height: 10vh;
+    margin-top: 10vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
+
+footer a i {
+    font-size: 2rem;
+}
+
+
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 50px;
+    height: 20px;
+}
+
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 20px;
+    width: 22px;
+    left: 2px;
+    bottom: 2px;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+input:checked+.slider {
+    background-color: #2196F3;
+}
+
+input:focus+.slider {
+    box-shadow: 0 0 1px #2196F3;
+}
+
+input:checked+.slider:before {
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(26px);
+}
+
+.slider.round {
+    border-radius: 1rem;
+}
+
+.slider.round:before {
+    border-radius: 50%;
+}
+
+.card-text{
+    color: black !important;
+}
+
+.card-title{
+    color: black !important;
+}
+
+@media screen and (max-width: 900px) {
+    .nav ul{
+        font-size: 1.4vw;
+    }
+    .nav{
+        height: 6vh;
+    }
+    .none{
+        display: none;
+    }
+    .second{
+        height: max-content;
+        flex-direction: column;
+    }
+    .info{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100vw;
+    }
+    .info h1{
+        font-size: 3rem;
+    }
+    .info p{
+        font-size: 1.5rem;
+    }
+    .info .intro{
+        font-size: 1rem;
+    }
+    img{
+        height: 20%;
+        width: 100%;
+    }
+    .proj{
+        flex-direction: column;
+        align-items: center;
+        height: max-content;
+    }
+    .card{
+        width: 50vw;
+        margin-bottom: 2rem;
+    }
+    .second .pic1{
+        width: 40vw;
+        height: 35vh;
+    }
+    
+}
+
+
+
+@media screen and (max-width: 673px) {
+    .sk1{
+        width: 15vw;
+        height: 15vh;
+    }
+    label{
+        font-size: 0.6rem;
+        font-weight: 400;
+    }
+    .third{
+        margin-top: 5rem;
+    }
+    .skill{
+        grid-template-columns: repeat(4, 1fr);
+    }
+    .info h1{
+        font-size: 1.7rem;
+    }
+    .info p{
+        font-size: 1rem;
+    }
+    .info .intro{
+        font-size: 0.8rem;
+    }
+    .nav h3 a{
+        font-size: 1rem;
+    }
+    .nav ul li{
+        font-size: 1rem;
+    }
+    .nav ul {
+        margin-top: 5px;
+    }
+    .switch{
+        width: 25px;
+        height: 10px;
+    }
+    .slider:before {
+        width: 13px;
+        height: 8px;
+    }
+}

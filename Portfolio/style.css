@@ -1,0 +1,271 @@
+*{
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    scroll-behavior: smooth;
+    color: white;
+}
+
+body{
+    background-color:black;
+}
+
+
+body::-webkit-scrollbar {
+    width: 5px;
+}
+
+body::-webkit-scrollbar-thumb {
+    background-color: transparent;
+}
+
+body::-webkit-scrollbar-track {
+    background-color: transparent;
+}
+
+
+.first{
+    height: 98vh;
+    width: 99vw;
+    margin: 0.5vw 1vh;
+    background-color: rgb(55, 54, 54);
+    /* background-color: ; */
+    backdrop-filter: blur(50px); 
+    border-radius: 1rem;
+    overflow: hidden;
+}
+
+.first .nav{
+    width: 97%;
+    height: 8vh;
+    color: #FF9F1C;
+    display: flex;
+    flex-direction: row; 
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    border-bottom: 2px solid black;
+}
+
+.first .nav h3 a{
+    text-decoration: none;
+    color: #FF9F1C !important;
+}
+
+.nav li{
+    margin-right: 1rem;
+}
+
+.first .nav ul{
+    display: flex;
+    flex-direction: row;
+    justify-content:space-between;
+}
+
+
+.first .nav ul a{
+    text-decoration: none;
+}
+
+.first .nav ul a:hover{
+    color: #FF9F1C;
+    text-decoration: underline;
+}
+
+main{
+    height: 90vh;
+    display: flex;
+    flex-direction: row;
+}
+
+.main{
+    height: 100%;
+    width: 60%;
+    padding-left: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.first .main p{
+    width: 20vw;
+    font-size: 20px;
+    font-family: sans-serif;
+    background-color: rgb(172, 125, 216);
+    border-radius: 1rem;
+    padding-left: 1rem;
+    padding-top: 2px;
+    padding-bottom: 2px;
+}
+
+.first .main h1{
+    font-family: 'Teko', sans-serif;
+    font-size: 70px;
+    font-weight: 400;
+}
+
+.first .main h2{
+    font-size: 60px;
+    font-weight: 400;
+    font-family: 'Teko', sans-serif;
+}
+
+.first .main .color{
+    color: #FF9F1C;
+}
+
+.first .main button{
+    background:  #eca748;
+    color: black;
+    padding: 1rem 2rem;
+    border-radius: 1rem;
+    font-size: 1rem;
+}
+
+.first .main button:hover{
+    background:  black;
+    color:  #eca748;
+    cursor: pointer;
+}
+
+
+
+.first .pic {
+    width: 50vw;
+    height: 65vh;
+    overflow: hidden;
+    margin-top: 7vh;
+    margin-right: 3rem;
+    border-radius: 2rem; 
+    border: 5px solid #eca748;
+    box-shadow: 2px 2px 5px cadetblue;
+    transition: background-color 0.3s ease;  
+    cursor: pointer;
+}
+
+.first .pic img {
+    width: 100%; 
+    height: 100%; 
+    object-fit: cover;
+}
+
+.first .pic:hover img{
+    opacity: 0.4;
+    transform: scale(1.05);
+}
+
+.first .pic:hover{
+    background: linear-gradient( cadetblue, black );
+} 
+
+
+.first h5{
+    position: absolute;
+    bottom: 10%;
+    left: 50%;
+    transform: translate(-50%, 0);
+    font-size: 20px;
+    cursor: pointer;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+h5 a{
+    text-decoration: none;
+}
+
+
+
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 50px;
+    height: 20px;
+}
+
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 20px;
+    width: 22px;
+    left: 2px;
+    bottom: 2px;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+input:checked+.slider {
+    background-color: #2196F3;
+}
+
+input:focus+.slider {
+    box-shadow: 0 0 1px #2196F3;
+}
+
+input:checked+.slider:before {
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(26px);
+}
+
+.slider.round {
+    border-radius: 1rem;
+}
+
+.slider.round:before {
+    border-radius: 50%;
+}
+
+@media screen and (max-width: 720px){
+    main{
+        flex-direction: column;
+        width: 100vw;
+    }
+    main .main{
+        width: 100vw;
+    }
+    main .pic{
+        margin: auto;
+    }
+    .first main .main p{
+        width: 70vw;
+    }
+} 
+
+@media screen and (max-width: 571px){
+    .first .nav .none{
+        display: none;
+    }
+    .first main .main h1{
+        font-size: 50px;
+    }
+    .first main .main h2{
+        font-size: 40px;
+    }
+    .first{
+        margin: 0;
+    }
+    .first .main{
+        padding: 1rem;
+    }
+}
